@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <!-- Exam Views -->
+      <record model="ir.ui.view" id="exam_form_view">
+        <field name="name">exams_ranking_system.exam.form</field>
+        <field name="model">exams_ranking_system.exam</field>
+        <field name="arch" type="xml">
+            <form string="Exam Form">
+                <group>
+                    <field name="name"/>
+                    <field name="date"/>
+                    <field name="total_marks"/>
+                </group>
+                <notebook>
+                    <page string="Results">
+                        <field name="result_ids" mode="tree">
+                            <tree>
+                                <field name="student_id"/>
+                                <field name="marks_obtained"/>
+                            </tree>
+                        </field>
+                    </page>
+                </notebook>
+            </form>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="exam_list_view">
+        <field name="name">exams_ranking_system.exam.list</field>
+        <field name="model">exams_ranking_system.exam</field>
+        <field name="arch" type="xml">
+            <tree string="Exam Tree">
+                <field name="name"/>
+                <field name="date"/>
+                <field name="total_marks"/>
+            </tree>
+        </field>
+    </record>
+
+    <record model="ir.ui.view" id="exam_kanban_view">
+        <field name="name">exams_ranking_system.exam.kanban</field>
+        <field name="model">exams_ranking_system.exam</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+                <field name="date"/>
+                <field name="total_marks"/>
+            </kanban>
+        </field>
+    </record>
+    <record model="ir.actions.act_window" id="exam_view">
+    <field name="name">Exam</field>
+    <field name="res_model">exams_ranking_system.exam</field>
+    <field name="view_mode">tree,form</field>
+
+    </record> 
+     <menuitem id="menu_exams" name="Exams" action="exam_view" parent="exams_ranking_system.menu_mainmenu" sequence="10"/>
+
+  
+    </odoo>

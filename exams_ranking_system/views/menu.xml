@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+<menuitem id="menu_ranker_root" name="Exam Ranker" sequence="10"/>
+<menuitem id="menu_mainmenu" parent="menu_ranker_root" name="Menu" sequence="10"/>
+
+    </odoo>

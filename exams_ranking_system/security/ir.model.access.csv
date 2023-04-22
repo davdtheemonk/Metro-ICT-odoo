@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+"student_id","student id","exams_ranking_system.model_exams_ranking_system_student","",1,0,0,0
+access_examresults,examresults,exams_ranking_system.model_exams_ranking_system_examresults,base.group,1,0,0,0
