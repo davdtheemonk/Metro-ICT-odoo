@@ -14,16 +14,13 @@
         'views/menu.xml',
         'views/exam_views.xml',
         'views/examresults.xml',
-        'views/ranking.xml',
         'views/student_views.xml',
         'security/ir.model.access.csv',
-         'views/assets.xml',
+        
        
         
    ],
-     'js': [
-        'static/js/ranking.js',
-    ],
+    
      
     'application': True,
 }
