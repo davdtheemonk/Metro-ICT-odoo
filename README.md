@@ -27,7 +27,7 @@ To use this module, follow the steps below:
 - Display the ranking of students by going to the "Ranking" menu and selecting the exam. You can filter and sort the data using the available options.
 
 5. Security:
-This module includes security rules and access controls for different user roles. The "Exam Manager" role has full access to all features, while the "Student User" role can only view and edit student data. The security rules are defined in the `security/exams_ranking_system_security.xml` file, and the access controls are defined in the `data/ir.model.access.csv` file.
+This module includes security rules and access controls for different user roles. The "Exam Manager" role has full access to all features, while the "Student User" role can only view and edit student data. The access controls are defined in the `data/ir.model.access.csv` file.
 
 6. Web Interface:
 The ranking of students per exam is displayed using a web interface developed with JavaScript and Odoo's web framework. The interface allows users to filter and sort the data using different options. The ranking table is rendered using a QWeb template defined in the `views/templates.xml` file.
