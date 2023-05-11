@@ -15,6 +15,8 @@
         'views/exam_views.xml',
         'views/examresults.xml',
         'views/student_views.xml',
+        'views/school_views.xml',
+        'views/class_views.xml',
         'security/ir.model.access.csv',
         
        

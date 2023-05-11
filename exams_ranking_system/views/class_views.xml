@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+        <record model="ir.ui.view" id="class_form_view">
+            <field name="name">classes.form</field>
+            <field name="model">exams_ranking_system.classes</field>
+            <field name="arch" type="xml">
+                <form>
+                    <sheet>
+                        <group>
+                            <field name="name"/>
+                         
+                        </group>
+                        <notebook>
+                            <page string="Students">
+                                <field name="student_ids" nolabel="1">
+                                    <tree>
+                                        <field name="first_name"/>
+                                        <field name="last_name"/>
+                                        <field name="email"/>
+                                        <field name="result_ids" widget="many2many_tags"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="student_kanban_view">
+            <field name="name">classes.kanban</field>
+            <field name="model">exams_ranking_system.classes</field>
+            <field name="arch" type="xml">
+                <kanban>
+                    <field name="name"/>
+                   
+                    <templates>
+                        <t t-name="kanban-box">
+                            <div class="oe_kanban_global_click">
+                                <div class="oe_kanban_card_content">
+                                    <div class="oe_kanban_card_title">
+                                        <field name="name"/>
+                            
+                                    </div>
+                                  
+                                </div>
+                            </div>
+                        </t>
+                    </templates>
+                </kanban>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="class_tree_view">
+            <field name="name">classes.list</field>
+            <field name="model">exams_ranking_system.classes</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="name"/>
+              
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="class_views">
+            <field name="name">Classes</field>
+            <field name="res_model">exams_ranking_system.classes</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+  
+    </data>
+          <menuitem id="menu_classes" name="Classes" action="class_views" parent="exams_ranking_system.menu_mainmenu" sequence="10"/>
+   
+</odoo>

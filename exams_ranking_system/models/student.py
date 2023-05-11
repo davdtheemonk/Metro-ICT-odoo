@@ -6,3 +6,5 @@ class Student(models.Model):
     last_name = fields.Char(string='Last Name', required=True)
     email = fields.Char(string="Email", required=True)
     result_ids = fields.One2many('exams_ranking_system.examresult', 'student_id', string="Results")
+    class_id = fields.Many2one('exams_ranking_system.classes', 'Classes')
+

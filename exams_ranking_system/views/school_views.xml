@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+      <data>
+        <record model="ir.ui.view" id="school_form_view">
+            <field name="name">exams_ranking_system.school</field>
+            <field name="model">exams_ranking_system.school</field>
+            <field name="arch" type="xml">
+                <form string="School Form">
+                        <group>
+                            <field name="name"/>
+                        </group>
+                        <notebook>
+                       <page string="Classes">
+              <field name="class_id" mode="tree" >
+                <tree>
+                  <field name="name"/>
+                   <field name="student_ids"/>
+                    <field name="school_id"/>
+                </tree>
+              </field>
+            </page>
+                        </notebook>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="school_list_view">
+            <field name="name">exams_ranking_system.school</field>
+            <field name="model">exams_ranking_system.school</field>
+            <field name="arch" type="xml">
+                <tree string="School tree">
+                    <field name="name"/>
+                </tree>
+            </field>
+        </record>
+     <record model="ir.ui.view" id="exam_kanban_view">
+        <field name="name">exams_ranking_system.school.kanban</field>
+        <field name="model">exams_ranking_system.school</field>
+        <field name="arch" type="xml">
+            <kanban>
+                <field name="name"/>
+    
+            </kanban>
+        </field>
+    </record>
+
+        <record model="ir.actions.act_window" id="school_action">
+            <field name="name">School</field>
+            <field name="res_model">exams_ranking_system.school</field>
+            <field name="view_mode">tree,form</field>
+        </record>
+    </data>
+    <menuitem id="menu_schools" name="Schools" action="school_action" parent="exams_ranking_system.menu_mainmenu" sequence="10"/>
+
+</odoo>
